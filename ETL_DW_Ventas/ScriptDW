@@ -1,0 +1,174 @@
+/* =========================================================
+   DW_Ventas – Script seguro (sin DROP DATABASE)
+   - Crea DB si no existe
+   - DROP TABLE IF EXISTS (orden correcto: FACTS -> DIMS)
+   - Crea Dims y Facts con FKs/Índices
+   - Poblado: DimTiempo (2010–2030), Tienda/Empleado (mínimo)
+   - Cliente/Producto los carga el ETL
+   ========================================================= */
+
+-- 0) Crear BD si no existe y usarla
+IF DB_ID('DW_Ventas') IS NULL
+BEGIN
+  CREATE DATABASE DW_Ventas;
+END
+GO
+USE DW_Ventas;
+GO
+
+/* 1) Eliminar tablas si existen (orden correcto: FACTS -> DIMS) */
+IF OBJECT_ID('dbo.FactVentas', 'U')     IS NOT NULL DROP TABLE dbo.FactVentas;
+IF OBJECT_ID('dbo.FactInventario', 'U') IS NOT NULL DROP TABLE dbo.FactInventario;
+
+IF OBJECT_ID('dbo.DimEmpleado', 'U') IS NOT NULL DROP TABLE dbo.DimEmpleado;
+IF OBJECT_ID('dbo.DimTienda',   'U') IS NOT NULL DROP TABLE dbo.DimTienda;
+IF OBJECT_ID('dbo.DimCliente',  'U') IS NOT NULL DROP TABLE dbo.DimCliente;
+IF OBJECT_ID('dbo.DimProducto', 'U') IS NOT NULL DROP TABLE dbo.DimProducto;
+IF OBJECT_ID('dbo.DimTiempo',   'U') IS NOT NULL DROP TABLE dbo.DimTiempo;
+GO
+
+/* 2) Crear Dimensiones */
+-- DimTiempo (clave empresarial: YYYYMMDD)
+CREATE TABLE dbo.DimTiempo (
+  TiempoKey     INT         NOT NULL PRIMARY KEY, -- YYYYMMDD
+  Fecha         DATE        NOT NULL,
+  Anio          INT         NOT NULL,
+  MesNum        TINYINT     NOT NULL,
+  MesNombre     VARCHAR(20) NOT NULL,
+  Dia           TINYINT     NOT NULL,
+  Trimestre     TINYINT     NOT NULL,
+  NombreDia     VARCHAR(20) NOT NULL,
+  EsFinDeSemana BIT         NOT NULL
+);
+
+-- DimProducto (¡ETL cargará los datos!)
+CREATE TABLE dbo.DimProducto (
+  ProductoKey     INT IDENTITY(1,1) PRIMARY KEY,
+  ProductoCodigo  VARCHAR(50)  NOT NULL UNIQUE,
+  NombreProducto  VARCHAR(150) NOT NULL,
+  Categoria       VARCHAR(100) NULL,
+  Marca           VARCHAR(100) NULL,
+  PrecioLista     DECIMAL(12,2) NULL,
+  Activo          BIT           NOT NULL DEFAULT (1),
+  VigenteDesde    DATETIME2(0)  NOT NULL DEFAULT (SYSUTCDATETIME()),
+  VigenteHasta    DATETIME2(0)  NULL
+);
+
+-- DimCliente (¡ETL cargará los datos!)
+CREATE TABLE dbo.DimCliente (
+  ClienteKey     INT IDENTITY(1,1) PRIMARY KEY,
+  ClienteCodigo  VARCHAR(50)  NOT NULL UNIQUE,
+  Nombre         VARCHAR(120) NOT NULL,
+  Segmento       VARCHAR(50)  NULL,
+  Ciudad         VARCHAR(80)  NULL,
+  Provincia      VARCHAR(80)  NULL,
+  Pais           VARCHAR(80)  NOT NULL DEFAULT ('Argentina')
+);
+
+-- DimTienda (dejamos datos semilla mínimos)
+CREATE TABLE dbo.DimTienda (
+  TiendaKey     INT IDENTITY(1,1) PRIMARY KEY,
+  TiendaCodigo  VARCHAR(50)  NOT NULL UNIQUE,
+  NombreTienda  VARCHAR(120) NOT NULL,
+  Ciudad        VARCHAR(80)  NULL,
+  Provincia     VARCHAR(80)  NULL,
+  Pais          VARCHAR(80)  NOT NULL DEFAULT ('Argentina')
+);
+
+-- DimEmpleado (dejamos datos semilla mínimos)
+CREATE TABLE dbo.DimEmpleado (
+  EmpleadoKey     INT IDENTITY(1,1) PRIMARY KEY,
+  EmpleadoCodigo  VARCHAR(50)  NOT NULL UNIQUE,
+  NombreEmpleado  VARCHAR(120) NOT NULL,
+  Puesto          VARCHAR(80)  NULL
+);
+
+GO
+
+/* 3) Crear Hechos */
+-- FactVentas (granularidad: línea de ticket)
+CREATE TABLE dbo.FactVentas (
+  FactVentasID  BIGINT IDENTITY(1,1) PRIMARY KEY,
+  TiempoKey     INT           NOT NULL,
+  ProductoKey   INT           NOT NULL,
+  ClienteKey    INT           NULL,
+  TiendaKey     INT           NOT NULL,
+  EmpleadoKey   INT           NULL,
+  Cantidad      DECIMAL(12,2) NOT NULL,
+  PrecioUnit    DECIMAL(12,2) NOT NULL,
+  Descuento     DECIMAL(12,2) NOT NULL DEFAULT (0),
+  MontoNeto     AS (Cantidad * (PrecioUnit - Descuento)) PERSISTED,
+
+  CONSTRAINT FK_FV_Tiempo    FOREIGN KEY (TiempoKey)   REFERENCES dbo.DimTiempo(TiempoKey),
+  CONSTRAINT FK_FV_Producto  FOREIGN KEY (ProductoKey) REFERENCES dbo.DimProducto(ProductoKey),
+  CONSTRAINT FK_FV_Cliente   FOREIGN KEY (ClienteKey)  REFERENCES dbo.DimCliente(ClienteKey),
+  CONSTRAINT FK_FV_Tienda    FOREIGN KEY (TiendaKey)   REFERENCES dbo.DimTienda(TiendaKey),
+  CONSTRAINT FK_FV_Empleado  FOREIGN KEY (EmpleadoKey) REFERENCES dbo.DimEmpleado(EmpleadoKey)
+);
+CREATE INDEX IX_FV_Tiempo   ON dbo.FactVentas (TiempoKey);
+CREATE INDEX IX_FV_Producto ON dbo.FactVentas (ProductoKey);
+CREATE INDEX IX_FV_Cliente  ON dbo.FactVentas (ClienteKey);
+CREATE INDEX IX_FV_Tienda   ON dbo.FactVentas (TiendaKey);
+CREATE INDEX IX_FV_Empleado ON dbo.FactVentas (EmpleadoKey);
+
+-- FactInventario (snapshot diario por producto y tienda)
+CREATE TABLE dbo.FactInventario (
+  TiempoKey     INT           NOT NULL,
+  ProductoKey   INT           NOT NULL,
+  TiendaKey     INT           NOT NULL,
+  Stock         DECIMAL(12,2) NOT NULL,
+  CostoUnit     DECIMAL(12,2) NULL,
+  CONSTRAINT PK_FactInventario PRIMARY KEY (TiempoKey, ProductoKey, TiendaKey),
+
+  CONSTRAINT FK_FIN_Tiempo   FOREIGN KEY (TiempoKey)   REFERENCES dbo.DimTiempo(TiempoKey),
+  CONSTRAINT FK_FIN_Producto FOREIGN KEY (ProductoKey) REFERENCES dbo.DimProducto(ProductoKey),
+  CONSTRAINT FK_FIN_Tienda   FOREIGN KEY (TiendaKey)   REFERENCES dbo.DimTienda(TiendaKey)
+);
+CREATE INDEX IX_FIN_Producto ON dbo.FactInventario (ProductoKey);
+CREATE INDEX IX_FIN_Tienda   ON dbo.FactInventario (TiendaKey);
+GO
+
+/* 4) Poblar DimTiempo (rango amplio 2010–2030) */
+;WITH fechas AS (
+    SELECT CAST('2010-01-01' AS DATE) AS f
+    UNION ALL
+    SELECT DATEADD(DAY, 1, f) FROM fechas WHERE f < '2030-12-31'
+)
+INSERT INTO dbo.DimTiempo (TiempoKey, Fecha, Anio, MesNum, MesNombre, Dia, Trimestre, NombreDia, EsFinDeSemana)
+SELECT
+    CONVERT(INT, FORMAT(f, 'yyyyMMdd')),
+    f,
+    YEAR(f),
+    MONTH(f),
+    DATENAME(MONTH, f),
+    DAY(f),
+    DATEPART(QUARTER, f),
+    DATENAME(WEEKDAY, f),
+    CASE WHEN DATEPART(WEEKDAY, f) IN (1,7) THEN 1 ELSE 0 END
+FROM fechas
+OPTION (MAXRECURSION 0);
+GO
+
+/* 5) Semillas mínimas (Tienda y Empleado) 
+   - Necesarias si FactVentas hace lookup por Tienda/Empleado.
+   - Si no las querés, comentá este bloque.
+*/
+INSERT INTO dbo.DimTienda (TiendaCodigo, NombreTienda, Ciudad, Provincia, Pais) VALUES
+('T-001','Electro Palermo','CABA','Buenos Aires','Argentina'),
+('T-002','Electro Córdoba Centro','Córdoba','Córdoba','Argentina');
+
+INSERT INTO dbo.DimEmpleado (EmpleadoCodigo, NombreEmpleado, Puesto) VALUES
+('E-001','Laura Martínez','Vendedor'),
+('E-002','Santiago Ruiz','Vendedor'),
+('E-003','Ana Torres','Supervisor');
+GO
+
+/* 6) Checks rápidos */
+SELECT 'DimTiempo' AS Tabla, COUNT(*) AS Filas FROM dbo.DimTiempo
+UNION ALL SELECT 'DimProducto', COUNT(*) FROM dbo.DimProducto
+UNION ALL SELECT 'DimCliente',  COUNT(*) FROM dbo.DimCliente
+UNION ALL SELECT 'DimTienda',   COUNT(*) FROM dbo.DimTienda
+UNION ALL SELECT 'DimEmpleado', COUNT(*) FROM dbo.DimEmpleado;
+
+SELECT COUNT(*) AS Filas_FactVentas     FROM dbo.FactVentas;
+SELECT COUNT(*) AS Filas_FactInventario FROM dbo.FactInventario;

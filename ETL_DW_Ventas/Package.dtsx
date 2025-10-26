@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{AE9453BA-4CF8-43E1-B17E-25C12DF6A263}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{6772005B-74AD-47A7-9266-21F4A03CDC56}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2378,13 +2378,13 @@ where [refTable].[TiendaCodigo] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Tarea Ejecutar SQL"
+      DTS:refId="Package\SQL Resetear Dim"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
       DTS:DTSID="{3C86DDBF-75D7-467E-A2A6-021E02144FCA}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Tarea Ejecutar SQL"
+      DTS:ObjectName="SQL Resetear Dim"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -2394,16 +2394,49 @@ where [refTable].[TiendaCodigo] = ?</property>
           SQLTask:SqlStatementSource="DELETE FROM dbo.DimCliente;&#xA;DBCC CHECKIDENT ('dbo.DimCliente',  RESEED, 0);&#xA;&#xA;DELETE FROM dbo.DimProducto;&#xA;DBCC CHECKIDENT ('dbo.DimProducto', RESEED, 0);&#xA;&#xA;TRUNCATE TABLE dbo.FactVentas;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Resetear FactVentas"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{9B012CE4-1C39-4B94-BA95-766528A29B80}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Resetear FactVentas"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1AC86B1B-E0F7-47A6-83C2-A08CCA50FB47}"
+          SQLTask:SqlStatementSource="USE DW_Ventas;&#xA;TRUNCATE TABLE dbo.FactVentas;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción]"
       DTS:CreationName=""
       DTS:DTSID="{B05F99D6-9B2D-4E29-9400-6A8A493A219C}"
-      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:From="Package\SQL Resetear Dim"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción"
       DTS:To="Package\Cargar Dimensiones" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{F053FE59-7560-4FEE-BDBE-378C5774AA54}"
+      DTS:From="Package\Cargar Dimensiones"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\SQL Resetear FactVentas" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{5E0D45AD-F1E9-4527-8E7D-98FF304A43CA}"
+      DTS:From="Package\SQL Resetear FactVentas"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 2"
+      DTS:To="Package\Cargar Fact Ventas" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -2416,29 +2449,29 @@ where [refTable].[TiendaCodigo] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="173,42"
           Id="Package\Cargar Dimensiones"
           TopLeft="318,91" />
         <NodeLayout
-          Size="170,42"
-          Id="Package\Tarea Ejecutar SQL"
+          Size="164,42"
+          Id="Package\SQL Resetear Dim"
           TopLeft="88,93" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="258,113">
+          TopLeft="252,113">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="60,0"
+              EndConnector="66,0"
               Start="0,0"
-              End="52.5,0">
+              End="58.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="52.5,0" />
+                    End="58.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2450,7 +2483,67 @@ where [refTable].[TiendaCodigo] = ?</property>
         <NodeLayout
           Size="168,42"
           Id="Package\Cargar Fact Ventas"
-          TopLeft="315,204" />
+          TopLeft="81,205" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\SQL Resetear FactVentas"
+          TopLeft="329,200" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="404.5,133">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23,67"
+              Start="0,0"
+              End="23,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.5"
+                    Point2="0,33.5"
+                    Point3="4,33.5" />
+                  <mssgle:LineSegment
+                    End="19,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19,33.5"
+                    Point2="23,33.5"
+                    Point3="23,37.5" />
+                  <mssgle:LineSegment
+                    End="23,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="329,223.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-80,0"
+              Start="0,0"
+              End="-72.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-72.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>

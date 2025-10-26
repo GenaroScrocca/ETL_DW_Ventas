@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{035CF686-3A54-42AC-BD6F-55752D6D8252}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{AE9453BA-4CF8-43E1-B17E-25C12DF6A263}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -264,13 +264,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Cargar Dim y Fact"
+      DTS:refId="Package\Cargar Dimensiones"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{2E69DA4C-876B-49CF-A6A0-5977D287BAD5}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Cargar Dim y Fact"
+      DTS:ObjectName="Cargar Dimensiones"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -278,7 +278,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Cargar Dim y Fact\Clientes"
+              refId="Package\Cargar Dimensiones\Clientes"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
@@ -298,25 +298,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Cargar Dim y Fact\Clientes.Connections[FlatFileConnection]"
+                  refId="Package\Cargar Dimensiones\Clientes.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Clientes.csv]"
                   connectionManagerRefId="Package.ConnectionManagers[Clientes.csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output]"
+                  refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[ClienteCodigo]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[ClienteCodigo]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[ClienteCodigo]"
+                      externalMetadataColumnId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[ClienteCodigo]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[ClienteCodigo]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[ClienteCodigo]"
                       name="ClienteCodigo"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -331,14 +331,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Nombre]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Nombre]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[Nombre]"
+                      externalMetadataColumnId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[Nombre]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Nombre]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Nombre]"
                       name="Nombre"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -353,14 +353,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Segmento]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Segmento]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[Segmento]"
+                      externalMetadataColumnId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[Segmento]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Segmento]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Segmento]"
                       name="Segmento"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -375,14 +375,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Ciudad]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Ciudad]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[Ciudad]"
+                      externalMetadataColumnId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[Ciudad]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Ciudad]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Ciudad]"
                       name="Ciudad"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -397,14 +397,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Provincia]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Provincia]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[Provincia]"
+                      externalMetadataColumnId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[Provincia]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Provincia]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Provincia]"
                       name="Provincia"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -419,14 +419,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Pais]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Pais]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[Pais]"
+                      externalMetadataColumnId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[Pais]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Pais]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Pais]"
                       name="Pais"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -444,37 +444,37 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[ClienteCodigo]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[ClienteCodigo]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ClienteCodigo" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[Nombre]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[Nombre]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Nombre" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[Segmento]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[Segmento]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Segmento" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[Ciudad]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[Ciudad]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Ciudad" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[Provincia]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[Provincia]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Provincia" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].ExternalColumns[Pais]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].ExternalColumns[Pais]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -482,27 +482,27 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Error Output]"
+                  refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="65001"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -511,249 +511,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Cargar Dim y Fact\Derived Column"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Cargar Dim y Fact\Derived Column.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Cargar Dim y Fact\Derived Column.Inputs[Derived Column Input].Columns[Fecha]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Fecha"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[Fecha]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Cargar Dim y Fact\Derived Column.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Cargar Dim y Fact\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Cargar Dim y Fact\Derived Column.Outputs[Derived Column Output].Columns[TiempoKey]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Cargar Dim y Fact\Derived Column.Outputs[Derived Column Output].Columns[TiempoKey]"
-                      name="TiempoKey"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_I4)([YEAR]((DT_DATE)#{Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[Fecha]}) * 10000 + [MONTH]((DT_DATE)#{Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[Fecha]}) * 100 + [DAY]((DT_DATE)#{Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[Fecha]}))</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_I4)(YEAR((DT_DATE)Fecha) * 10000 + MONTH((DT_DATE)Fecha) * 100 + DAY((DT_DATE)Fecha))</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Cargar Dim y Fact\Derived Column.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Cargar Dim y Fact\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Cargar Dim y Fact\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Cargar Dim y Fact\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Cargar Dim y Fact\Lookup"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimProducto]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimProducto]) [refTable]
-where [refTable].[ProductoCodigo] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductoKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductoCodigo" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreProducto" dataType="DT_STR" length="150" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Categoria" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Marca" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="PrecioLista" dataType="DT_NUMERIC" length="0" precision="12" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Activo" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VigenteDesde" dataType="DT_DBTIMESTAMP2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VigenteHasta" dataType="DT_DBTIMESTAMP2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[ProductoCodigo]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Cargar Dim y Fact\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[localhost.DW_Ventas]"
-                  connectionManagerRefId="Package.ConnectionManagers[localhost.DW_Ventas]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Cargar Dim y Fact\Lookup.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Cargar Dim y Fact\Lookup.Inputs[Lookup Input].Columns[ProductoCodigo]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="ProductoCodigo"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[ProductoCodigo]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">ProductoCodigo</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Cargar Dim y Fact\Lookup.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Cargar Dim y Fact\Lookup.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Cargar Dim y Fact\Lookup.Outputs[Lookup Match Output].Columns[ProductoKey]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Cargar Dim y Fact\Lookup.Outputs[Lookup Match Output].Columns[ProductoKey]"
-                      name="ProductoKey"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">ProductoKey</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Cargar Dim y Fact\Lookup.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Cargar Dim y Fact\Lookup.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Cargar Dim y Fact\Lookup.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Cargar Dim y Fact\Lookup.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Cargar Dim y Fact\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Cargar Dim y Fact\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes"
+              refId="Package\Cargar Dimensiones\OLE DB Destination Clientes"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -810,7 +568,7 @@ where [refTable].[ProductoCodigo] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Connections[OleDbConnection]"
+                  refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.DW_Ventas]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.DW_Ventas]"
                   description="The OLE DB runtime connection used to access the database."
@@ -818,99 +576,99 @@ where [refTable].[ProductoCodigo] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input]"
+                  refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[ClienteCodigo]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[ClienteCodigo]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="ClienteCodigo"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[ClienteCodigo]"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[ClienteCodigo]" />
+                      externalMetadataColumnId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[ClienteCodigo]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[ClienteCodigo]" />
                     <inputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[Nombre]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[Nombre]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Nombre"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Nombre]" />
+                      externalMetadataColumnId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Nombre]" />
                     <inputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[Segmento]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[Segmento]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Segmento"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Segmento]"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Segmento]" />
+                      externalMetadataColumnId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Segmento]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Segmento]" />
                     <inputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[Ciudad]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[Ciudad]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Ciudad"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Ciudad]"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Ciudad]" />
+                      externalMetadataColumnId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Ciudad]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Ciudad]" />
                     <inputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[Provincia]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[Provincia]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Provincia"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Provincia]"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Provincia]" />
+                      externalMetadataColumnId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Provincia]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Provincia]" />
                     <inputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[Pais]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].Columns[Pais]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Pais"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Pais]"
-                      lineageId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output].Columns[Pais]" />
+                      externalMetadataColumnId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Pais]"
+                      lineageId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output].Columns[Pais]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[ClienteKey]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[ClienteKey]"
                       dataType="i4"
                       name="ClienteKey" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[ClienteCodigo]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[ClienteCodigo]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ClienteCodigo" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
                       codePage="1252"
                       dataType="str"
                       length="120"
                       name="Nombre" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Segmento]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Segmento]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Segmento" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Ciudad]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Ciudad]"
                       codePage="1252"
                       dataType="str"
                       length="80"
                       name="Ciudad" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Provincia]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Provincia]"
                       codePage="1252"
                       dataType="str"
                       length="80"
                       name="Provincia" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Pais]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input].ExternalColumns[Pais]"
                       codePage="1252"
                       dataType="str"
                       length="80"
@@ -920,22 +678,22 @@ where [refTable].[ProductoCodigo] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -944,7 +702,7 @@ where [refTable].[ProductoCodigo] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Cargar Dim y Fact\OLE DB Destination Producto"
+              refId="Package\Cargar Dimensiones\OLE DB Destination Producto"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -1001,7 +759,7 @@ where [refTable].[ProductoCodigo] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Connections[OleDbConnection]"
+                  refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.DW_Ventas]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.DW_Ventas]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1009,99 +767,99 @@ where [refTable].[ProductoCodigo] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input]"
+                  refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[ProductoCodigo]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[ProductoCodigo]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="ProductoCodigo"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[ProductoCodigo]"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[ProductoCodigo]" />
+                      externalMetadataColumnId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[ProductoCodigo]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[ProductoCodigo]" />
                     <inputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[NombreProducto]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[NombreProducto]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="NombreProducto"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[NombreProducto]"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[NombreProducto]" />
+                      externalMetadataColumnId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[NombreProducto]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[NombreProducto]" />
                     <inputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[Categoria]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[Categoria]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Categoria"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[Categoria]"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[Categoria]" />
+                      externalMetadataColumnId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[Categoria]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[Categoria]" />
                     <inputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[Marca]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[Marca]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Marca"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[Marca]"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[Marca]" />
+                      externalMetadataColumnId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[Marca]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[Marca]" />
                     <inputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[PrecioLista]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].Columns[PrecioLista]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="PrecioLista"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[PrecioLista]"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[PrecioLista]" />
+                      externalMetadataColumnId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[PrecioLista]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[PrecioLista]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[ProductoKey]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[ProductoKey]"
                       dataType="i4"
                       name="ProductoKey" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[ProductoCodigo]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[ProductoCodigo]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ProductoCodigo" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[NombreProducto]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[NombreProducto]"
                       codePage="1252"
                       dataType="str"
                       length="150"
                       name="NombreProducto" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[Categoria]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[Categoria]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="Categoria" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[Marca]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[Marca]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="Marca" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[PrecioLista]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[PrecioLista]"
                       dataType="numeric"
                       name="PrecioLista"
                       precision="12"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[Activo]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[Activo]"
                       dataType="bool"
                       name="Activo" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[VigenteDesde]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[VigenteDesde]"
                       dataType="dbTimeStamp2"
                       name="VigenteDesde" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[VigenteHasta]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input].ExternalColumns[VigenteHasta]"
                       dataType="dbTimeStamp2"
                       name="VigenteHasta" />
                   </externalMetadataColumns>
@@ -1109,22 +867,22 @@ where [refTable].[ProductoCodigo] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar Dimensiones\OLE DB Destination Producto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar Dimensiones\OLE DB Destination Producto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar Dimensiones\OLE DB Destination Producto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1133,7 +891,7 @@ where [refTable].[ProductoCodigo] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Cargar Dim y Fact\Producto"
+              refId="Package\Cargar Dimensiones\Producto"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
@@ -1153,25 +911,25 @@ where [refTable].[ProductoCodigo] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Cargar Dim y Fact\Producto.Connections[FlatFileConnection]"
+                  refId="Package\Cargar Dimensiones\Producto.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Producto.csv]"
                   connectionManagerRefId="Package.ConnectionManagers[Producto.csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output]"
+                  refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[ProductoCodigo]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[ProductoCodigo]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].ExternalColumns[ProductoCodigo]"
+                      externalMetadataColumnId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].ExternalColumns[ProductoCodigo]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[ProductoCodigo]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[ProductoCodigo]"
                       name="ProductoCodigo"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1186,14 +944,14 @@ where [refTable].[ProductoCodigo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[NombreProducto]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[NombreProducto]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].ExternalColumns[NombreProducto]"
+                      externalMetadataColumnId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].ExternalColumns[NombreProducto]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[NombreProducto]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[NombreProducto]"
                       name="NombreProducto"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1208,14 +966,14 @@ where [refTable].[ProductoCodigo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[Categoria]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[Categoria]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].ExternalColumns[Categoria]"
+                      externalMetadataColumnId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].ExternalColumns[Categoria]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[Categoria]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[Categoria]"
                       name="Categoria"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1230,14 +988,14 @@ where [refTable].[ProductoCodigo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[Marca]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[Marca]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].ExternalColumns[Marca]"
+                      externalMetadataColumnId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].ExternalColumns[Marca]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[Marca]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[Marca]"
                       name="Marca"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1252,14 +1010,14 @@ where [refTable].[ProductoCodigo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[PrecioLista]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[PrecioLista]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].ExternalColumns[PrecioLista]"
+                      externalMetadataColumnId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].ExternalColumns[PrecioLista]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].Columns[PrecioLista]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].Columns[PrecioLista]"
                       name="PrecioLista"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1277,31 +1035,31 @@ where [refTable].[ProductoCodigo] = ?</property>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].ExternalColumns[ProductoCodigo]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].ExternalColumns[ProductoCodigo]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ProductoCodigo" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].ExternalColumns[NombreProducto]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].ExternalColumns[NombreProducto]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="NombreProducto" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].ExternalColumns[Categoria]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].ExternalColumns[Categoria]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Categoria" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].ExternalColumns[Marca]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].ExternalColumns[Marca]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Marca" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output].ExternalColumns[PrecioLista]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output].ExternalColumns[PrecioLista]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -1309,27 +1067,139 @@ where [refTable].[ProductoCodigo] = ?</property>
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Error Output]"
+                  refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="65001"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Cargar Dimensiones.Paths[Flat File Source Output]"
+              endId="Package\Cargar Dimensiones\OLE DB Destination Clientes.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Cargar Dimensiones\Clientes.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Cargar Dimensiones.Paths[Flat File Source Output1]"
+              endId="Package\Cargar Dimensiones\OLE DB Destination Producto.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Cargar Dimensiones\Producto.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Cargar Fact Ventas"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{62A56B6A-B3AB-4E65-B796-E9E6BAE34094}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar Fact Ventas"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Cargar Fact Ventas\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar Fact Ventas\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\Derived Column.Inputs[Derived Column Input].Columns[Fecha]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Fecha"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Fecha]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Fact Ventas\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Derived Column.Outputs[Derived Column Output].Columns[TiempoKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Cargar Fact Ventas\Derived Column.Outputs[Derived Column Output].Columns[TiempoKey]"
+                      name="TiempoKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)([YEAR]((DT_DATE)#{Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Fecha]}) * 10000 + [MONTH]((DT_DATE)#{Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Fecha]}) * 100 + [DAY]((DT_DATE)#{Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Fecha]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)(YEAR((DT_DATE)Fecha) * 10000 + MONTH((DT_DATE)Fecha) * 100 + DAY((DT_DATE)Fecha))</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar Fact Ventas\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1338,7 +1208,852 @@ where [refTable].[ProductoCodigo] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Cargar Dim y Fact\Ventas"
+              refId="Package\Cargar Fact Ventas\Lookup Cliente"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Cliente"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimCliente]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCliente]) [refTable]
+where [refTable].[ClienteCodigo] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ClienteKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ClienteCodigo" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Nombre" dataType="DT_STR" length="120" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Segmento" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Ciudad" dataType="DT_STR" length="80" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Provincia" dataType="DT_STR" length="80" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Pais" dataType="DT_STR" length="80" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[ClienteCodigo]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Fact Ventas\Lookup Cliente.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DW_Ventas]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DW_Ventas]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar Fact Ventas\Lookup Cliente.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Cliente.Inputs[Lookup Input].Columns[ClienteCodigo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ClienteCodigo"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[ClienteCodigo]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ClienteCodigo</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Cliente.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Cliente.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Cliente.Outputs[Lookup Match Output].Columns[ClienteKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Cliente.Outputs[Lookup Match Output].Columns[ClienteKey]"
+                      name="ClienteKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ClienteKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Cliente.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Cliente.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Cliente.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Cliente.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Fact Ventas\Lookup Empleado"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Empleado"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimEmpleado]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimEmpleado]) [refTable]
+where [refTable].[EmpleadoCodigo] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="EmpleadoKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EmpleadoCodigo" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreEmpleado" dataType="DT_STR" length="120" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Puesto" dataType="DT_STR" length="80" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[EmpleadoCodigo]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Fact Ventas\Lookup Empleado.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DW_Ventas]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DW_Ventas]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar Fact Ventas\Lookup Empleado.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Empleado.Inputs[Lookup Input].Columns[EmpleadoCodigo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="EmpleadoCodigo"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[EmpleadoCodigo]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">EmpleadoCodigo</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Empleado.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Empleado.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Empleado.Outputs[Lookup Match Output].Columns[EmpleadoKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Empleado.Outputs[Lookup Match Output].Columns[EmpleadoKey]"
+                      name="EmpleadoKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">EmpleadoKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Empleado.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Empleado.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Empleado.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Empleado.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Empleado.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Empleado.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Empleado.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Empleado.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Fact Ventas\Lookup Producto"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Producto"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimProducto]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimProducto]) [refTable]
+where [refTable].[ProductoCodigo] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductoKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductoCodigo" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreProducto" dataType="DT_STR" length="150" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Categoria" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Marca" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="PrecioLista" dataType="DT_NUMERIC" length="0" precision="12" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Activo" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VigenteDesde" dataType="DT_DBTIMESTAMP2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VigenteHasta" dataType="DT_DBTIMESTAMP2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[ProductoCodigo]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Fact Ventas\Lookup Producto.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DW_Ventas]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DW_Ventas]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar Fact Ventas\Lookup Producto.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Producto.Inputs[Lookup Input].Columns[ProductoCodigo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductoCodigo"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[ProductoCodigo]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ProductoCodigo</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Producto.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Producto.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Producto.Outputs[Lookup Match Output].Columns[ProductoKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Producto.Outputs[Lookup Match Output].Columns[ProductoKey]"
+                      name="ProductoKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ProductoKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Producto.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Producto.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Producto.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Producto.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Fact Ventas\Lookup Tienda"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Tienda"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimTienda]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimTienda]) [refTable]
+where [refTable].[TiendaCodigo] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="TiendaKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TiendaCodigo" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreTienda" dataType="DT_STR" length="120" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Ciudad" dataType="DT_STR" length="80" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Provincia" dataType="DT_STR" length="80" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Pais" dataType="DT_STR" length="80" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[TiendaCodigo]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Fact Ventas\Lookup Tienda.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DW_Ventas]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DW_Ventas]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar Fact Ventas\Lookup Tienda.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Tienda.Inputs[Lookup Input].Columns[TiendaCodigo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TiendaCodigo"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[TiendaCodigo]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">TiendaCodigo</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Tienda.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Tienda.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Tienda.Outputs[Lookup Match Output].Columns[TiendaKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Tienda.Outputs[Lookup Match Output].Columns[TiendaKey]"
+                      name="TiendaKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TiendaKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Tienda.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Tienda.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar Fact Ventas\Lookup Tienda.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\Lookup Tienda.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Tienda.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Tienda.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\Lookup Tienda.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Tienda.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Fact Ventas\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactVentas]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Fact Ventas\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DW_Ventas]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DW_Ventas]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cantidad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Cantidad"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cantidad]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Cantidad]" />
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PrecioUnit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PrecioUnit"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PrecioUnit]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[PrecioUnit]" />
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Descuento]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Descuento"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Descuento]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Descuento]" />
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TiempoKey]"
+                      cachedDataType="i4"
+                      cachedName="TiempoKey"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TiempoKey]"
+                      lineageId="Package\Cargar Fact Ventas\Derived Column.Outputs[Derived Column Output].Columns[TiempoKey]" />
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductoKey]"
+                      cachedDataType="i4"
+                      cachedName="ProductoKey"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductoKey]"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Producto.Outputs[Lookup Match Output].Columns[ProductoKey]" />
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ClienteKey]"
+                      cachedDataType="i4"
+                      cachedName="ClienteKey"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClienteKey]"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Cliente.Outputs[Lookup Match Output].Columns[ClienteKey]" />
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TiendaKey]"
+                      cachedDataType="i4"
+                      cachedName="TiendaKey"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TiendaKey]"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Tienda.Outputs[Lookup Match Output].Columns[TiendaKey]" />
+                    <inputColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EmpleadoKey]"
+                      cachedDataType="i4"
+                      cachedName="EmpleadoKey"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EmpleadoKey]"
+                      lineageId="Package\Cargar Fact Ventas\Lookup Empleado.Outputs[Lookup Match Output].Columns[EmpleadoKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FactVentasID]"
+                      dataType="i8"
+                      name="FactVentasID" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TiempoKey]"
+                      dataType="i4"
+                      name="TiempoKey" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductoKey]"
+                      dataType="i4"
+                      name="ProductoKey" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClienteKey]"
+                      dataType="i4"
+                      name="ClienteKey" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TiendaKey]"
+                      dataType="i4"
+                      name="TiendaKey" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EmpleadoKey]"
+                      dataType="i4"
+                      name="EmpleadoKey" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cantidad]"
+                      dataType="numeric"
+                      name="Cantidad"
+                      precision="12"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PrecioUnit]"
+                      dataType="numeric"
+                      name="PrecioUnit"
+                      precision="12"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Descuento]"
+                      dataType="numeric"
+                      name="Descuento"
+                      precision="12"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MontoNeto]"
+                      dataType="numeric"
+                      name="MontoNeto"
+                      precision="26"
+                      scale="4" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Fact Ventas\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Fact Ventas\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Fact Ventas\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Fact Ventas\Ventas"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
@@ -1358,25 +2073,25 @@ where [refTable].[ProductoCodigo] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Cargar Dim y Fact\Ventas.Connections[FlatFileConnection]"
+                  refId="Package\Cargar Fact Ventas\Ventas.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Ventas.csv]"
                   connectionManagerRefId="Package.ConnectionManagers[Ventas.csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output]"
+                  refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[Fecha]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Fecha]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[Fecha]"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[Fecha]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[Fecha]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Fecha]"
                       name="Fecha"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1391,14 +2106,14 @@ where [refTable].[ProductoCodigo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[ProductoCodigo]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[ProductoCodigo]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[ProductoCodigo]"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[ProductoCodigo]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[ProductoCodigo]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[ProductoCodigo]"
                       name="ProductoCodigo"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1413,14 +2128,14 @@ where [refTable].[ProductoCodigo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[ClienteCodigo]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[ClienteCodigo]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[ClienteCodigo]"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[ClienteCodigo]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[ClienteCodigo]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[ClienteCodigo]"
                       name="ClienteCodigo"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1435,14 +2150,14 @@ where [refTable].[ProductoCodigo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[TiendaCodigo]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[TiendaCodigo]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[TiendaCodigo]"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[TiendaCodigo]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[TiendaCodigo]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[TiendaCodigo]"
                       name="TiendaCodigo"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1457,14 +2172,14 @@ where [refTable].[ProductoCodigo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[EmpleadoCodigo]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[EmpleadoCodigo]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[EmpleadoCodigo]"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[EmpleadoCodigo]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[EmpleadoCodigo]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[EmpleadoCodigo]"
                       name="EmpleadoCodigo"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1479,14 +2194,14 @@ where [refTable].[ProductoCodigo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[Cantidad]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Cantidad]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[Cantidad]"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[Cantidad]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[Cantidad]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Cantidad]"
                       name="Cantidad"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1501,14 +2216,14 @@ where [refTable].[ProductoCodigo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[PrecioUnit]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[PrecioUnit]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[PrecioUnit]"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[PrecioUnit]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[PrecioUnit]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[PrecioUnit]"
                       name="PrecioUnit"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1523,14 +2238,14 @@ where [refTable].[ProductoCodigo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[Descuento]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Descuento]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[Descuento]"
+                      externalMetadataColumnId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[Descuento]"
                       length="50"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].Columns[Descuento]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].Columns[Descuento]"
                       name="Descuento"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1548,49 +2263,49 @@ where [refTable].[ProductoCodigo] = ?</property>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[Fecha]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[Fecha]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Fecha" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[ProductoCodigo]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[ProductoCodigo]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ProductoCodigo" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[ClienteCodigo]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[ClienteCodigo]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ClienteCodigo" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[TiendaCodigo]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[TiendaCodigo]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="TiendaCodigo" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[EmpleadoCodigo]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[EmpleadoCodigo]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="EmpleadoCodigo" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[Cantidad]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[Cantidad]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Cantidad" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[PrecioUnit]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[PrecioUnit]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="PrecioUnit" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output].ExternalColumns[Descuento]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output].ExternalColumns[Descuento]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -1598,27 +2313,27 @@ where [refTable].[ProductoCodigo] = ?</property>
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Error Output]"
+                  refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="65001"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1629,25 +2344,35 @@ where [refTable].[ProductoCodigo] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Cargar Dim y Fact.Paths[Derived Column Output]"
-              endId="Package\Cargar Dim y Fact\Lookup.Inputs[Lookup Input]"
+              refId="Package\Cargar Fact Ventas.Paths[Derived Column Output]"
+              endId="Package\Cargar Fact Ventas\Lookup Producto.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Cargar Dim y Fact\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\Cargar Fact Ventas\Derived Column.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Cargar Dim y Fact.Paths[Flat File Source Output]"
-              endId="Package\Cargar Dim y Fact\OLE DB Destination Clientes.Inputs[OLE DB Destination Input]"
+              refId="Package\Cargar Fact Ventas.Paths[Flat File Source Output]"
+              endId="Package\Cargar Fact Ventas\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
-              startId="Package\Cargar Dim y Fact\Clientes.Outputs[Flat File Source Output]" />
+              startId="Package\Cargar Fact Ventas\Ventas.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Cargar Dim y Fact.Paths[Flat File Source Output1]"
-              endId="Package\Cargar Dim y Fact\OLE DB Destination Producto.Inputs[OLE DB Destination Input]"
-              name="Flat File Source Output"
-              startId="Package\Cargar Dim y Fact\Producto.Outputs[Flat File Source Output]" />
+              refId="Package\Cargar Fact Ventas.Paths[Lookup Match Output]"
+              endId="Package\Cargar Fact Ventas\Lookup Cliente.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Cargar Fact Ventas\Lookup Producto.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Cargar Dim y Fact.Paths[Flat File Source Output2]"
-              endId="Package\Cargar Dim y Fact\Derived Column.Inputs[Derived Column Input]"
-              name="Flat File Source Output"
-              startId="Package\Cargar Dim y Fact\Ventas.Outputs[Flat File Source Output]" />
+              refId="Package\Cargar Fact Ventas.Paths[Lookup Match Output1]"
+              endId="Package\Cargar Fact Ventas\Lookup Tienda.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Cargar Fact Ventas\Lookup Cliente.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Cargar Fact Ventas.Paths[Lookup Match Output2]"
+              endId="Package\Cargar Fact Ventas\Lookup Empleado.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Cargar Fact Ventas\Lookup Tienda.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Cargar Fact Ventas.Paths[Lookup Match Output3]"
+              endId="Package\Cargar Fact Ventas\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Cargar Fact Ventas\Lookup Empleado.Outputs[Lookup Match Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1678,7 +2403,7 @@ where [refTable].[ProductoCodigo] = ?</property>
       DTS:From="Package\Tarea Ejecutar SQL"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción"
-      DTS:To="Package\Cargar Dim y Fact" />
+      DTS:To="Package\Cargar Dimensiones" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -1693,8 +2418,8 @@ where [refTable].[ProductoCodigo] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,42"
-          Id="Package\Cargar Dim y Fact"
+          Size="173,42"
+          Id="Package\Cargar Dimensiones"
           TopLeft="318,91" />
         <NodeLayout
           Size="170,42"
@@ -1722,32 +2447,32 @@ where [refTable].[ProductoCodigo] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Cargar Fact Ventas"
+          TopLeft="315,204" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Cargar Dim y Fact">
+    design-time-name="Package\Cargar Dimensiones">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="121,42"
-          Id="Package\Cargar Dim y Fact\Producto"
+          Id="Package\Cargar Dimensiones\Producto"
           TopLeft="163,203" />
         <NodeLayout
-          Size="111,42"
-          Id="Package\Cargar Dim y Fact\Ventas"
-          TopLeft="165,301" />
-        <NodeLayout
           Size="116,42"
-          Id="Package\Cargar Dim y Fact\Clientes"
+          Id="Package\Cargar Dimensiones\Clientes"
           TopLeft="170,95" />
         <NodeLayout
           Size="211,42"
-          Id="Package\Cargar Dim y Fact\OLE DB Destination Clientes"
+          Id="Package\Cargar Dimensiones\OLE DB Destination Clientes"
           TopLeft="364,97" />
         <EdgeLayout
-          Id="Package\Cargar Dim y Fact.Paths[Flat File Source Output]"
+          Id="Package\Cargar Dimensiones.Paths[Flat File Source Output]"
           TopLeft="286,117">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1770,10 +2495,10 @@ where [refTable].[ProductoCodigo] = ?</property>
         </EdgeLayout>
         <NodeLayout
           Size="216,42"
-          Id="Package\Cargar Dim y Fact\OLE DB Destination Producto"
+          Id="Package\Cargar Dimensiones\OLE DB Destination Producto"
           TopLeft="377,200" />
         <EdgeLayout
-          Id="Package\Cargar Dim y Fact.Paths[Flat File Source Output1]"
+          Id="Package\Cargar Dimensiones.Paths[Flat File Source Output1]"
           TopLeft="284,222.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1794,24 +2519,82 @@ where [refTable].[ProductoCodigo] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Dimensiones\OLE DB Destination Clientes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Dimensiones\OLE DB Destination Producto">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Cargar Fact Ventas">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="111,42"
+          Id="Package\Cargar Fact Ventas\Ventas"
+          TopLeft="60,65" />
         <NodeLayout
           Size="154,42"
-          Id="Package\Cargar Dim y Fact\Derived Column"
-          TopLeft="374,300" />
+          Id="Package\Cargar Fact Ventas\Derived Column"
+          TopLeft="227,62" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Cargar Fact Ventas\Lookup Producto"
+          TopLeft="431,60" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Cargar Fact Ventas\Lookup Cliente"
+          TopLeft="434.5,170.25" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Cargar Fact Ventas\Lookup Tienda"
+          TopLeft="712.5,169.25" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Cargar Fact Ventas\Lookup Empleado"
+          TopLeft="708.75,285.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Cargar Fact Ventas\OLE DB Destination"
+          TopLeft="413.75,283" />
         <EdgeLayout
-          Id="Package\Cargar Dim y Fact.Paths[Flat File Source Output2]"
-          TopLeft="276,321.5">
+          Id="Package\Cargar Fact Ventas.Paths[Flat File Source Output]"
+          TopLeft="171,84.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="98,0"
+              EndConnector="56,0"
               Start="0,0"
-              End="90.5,0">
+              End="48.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="90.5,0" />
+                    End="48.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1820,83 +2603,126 @@ where [refTable].[ProductoCodigo] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="113,42"
-          Id="Package\Cargar Dim y Fact\Lookup"
-          TopLeft="599,298" />
         <EdgeLayout
-          Id="Package\Cargar Dim y Fact.Paths[Derived Column Output]"
-          TopLeft="528,320">
+          Id="Package\Cargar Fact Ventas.Paths[Derived Column Output]"
+          TopLeft="381,82">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="71,0"
+              EndConnector="50,0"
               Start="0,0"
-              End="63.5,0">
+              End="42.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="63.5,0" />
+                    End="42.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Fact Ventas.Paths[Lookup Match Output]"
+          TopLeft="509.25,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68.25"
+              Start="0,0"
+              End="0,60.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,24.5703125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Fact Ventas.Paths[Lookup Match Output1]"
+          TopLeft="582.5,190.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="130,0"
+              Start="0,0"
+              End="122.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="122.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="13.05861328125,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Fact Ventas.Paths[Lookup Match Output2]"
+          TopLeft="788.375,211.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74.25"
+              Start="0,0"
+              End="0,66.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,27.5703125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Fact Ventas.Paths[Lookup Match Output3]"
+          TopLeft="708.75,305.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-124,0"
+              Start="0,0"
+              End="-116.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-116.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-106.44138671875,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Dim y Fact\OLE DB Destination Clientes">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Dim y Fact\OLE DB Destination Producto">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Dim y Fact\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimProducto]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
